@@ -43,14 +43,13 @@ namespace WipeOut
 			moveInput.x = Input.GetAxis("Horizontal");
 			moveInput.y = Input.GetAxis("Vertical");
 
-
 			if(!canMove)
 			{
 				moveInput = new Vector2(0, 0);
 			}
+
 			jumpInput = Input.GetButton("Jump");
 
-			
 			animator.SetFloat("Left", moveInput.x);
 			animator.SetFloat("Forwards", moveInput.y);
 			animator.SetBool("Jump", !isGrounded);
@@ -85,8 +84,15 @@ namespace WipeOut
 			if(isGrounded && velocity.y < 0)
 				velocity.y = 0;
 
-			if(!blackHole.hasMoved && !ragdoll.ragdollOn)
+			if(blackHole)
+			{
+				if(!blackHole.hasMoved && !ragdoll.ragdollOn)
+					velocity += Physics.gravity * Time.fixedDeltaTime;
+			}
+			else
+			{
 				velocity += Physics.gravity * Time.fixedDeltaTime;
+			}
 
 			if(!isGrounded)
 				hitDirection = Vector3.zero;

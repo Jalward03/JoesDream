@@ -60,7 +60,7 @@ namespace WipeOut
 
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
-			SceneManager.LoadScene("Menu");
+			SceneManager.LoadScene("Podium");
 		}
 
 		private IEnumerator StartBlackHole()

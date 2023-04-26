@@ -58,13 +58,13 @@ namespace WipeOut
 
 				if(m_seconds >= 60)
 				{
-					m_seconds = 0;
+					m_seconds -= 60;
 					m_minutes++;
 				}
 
 				if(m_minutes >= 60)
 				{
-					m_minutes = 0;
+					m_minutes -= 60;
 					m_hours++;
 				}
 			}

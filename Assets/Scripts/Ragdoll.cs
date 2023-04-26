@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.VFX;
 
 namespace WipeOut
@@ -49,7 +50,6 @@ namespace WipeOut
 
 		private IEnumerator GetUp()
 		{
-			
 			// Waits 3 seconds before letting player get up
 			canGetUp = true;
 
