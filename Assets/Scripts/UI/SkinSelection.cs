@@ -11,7 +11,7 @@ using WipeOut;
 
 using Cursor = UnityEngine.Cursor;
 
-namespace Wipeout
+namespace WipeOut
 {
 	public class SkinSelection : MonoBehaviour
 	{
