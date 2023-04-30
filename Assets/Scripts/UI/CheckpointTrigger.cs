@@ -37,7 +37,8 @@ namespace WipeOut
 					hasUsed = true;
 					player.GetComponent<CharacterController>().enabled = true;
 
-					tt.m_seconds += 15;
+					if(tt) 
+						tt.m_seconds += 15;
 				}
 				else if(!hasUsed)
 				{

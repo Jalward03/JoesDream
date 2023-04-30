@@ -50,8 +50,8 @@ namespace WipeOut
 
 			jumpInput = Input.GetButton("Jump");
 
-			animator.SetFloat("Left", moveInput.x);
-			animator.SetFloat("Forwards", moveInput.y);
+			animator.SetFloat("Left", moveInput.x, 0.1f, Time.deltaTime);
+			animator.SetFloat("Forwards", moveInput.y, 0.1f, Time.deltaTime);
 			animator.SetBool("Jump", !isGrounded);
 		}
 

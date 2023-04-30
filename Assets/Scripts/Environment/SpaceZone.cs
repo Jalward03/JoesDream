@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,8 @@ public class SpaceZone : MonoBehaviour
     public GameObject blackHole;
     public GameObject ragdoll;
     public GameObject player;
-        
-    
+    public GameObject text;
+
     [SerializeField] CameraController cameraController;
     private float delay = 3.0f;
     private bool blackHoleCanStart;
@@ -26,6 +27,15 @@ public class SpaceZone : MonoBehaviour
 
         canGetUp = true;
     }
+
+   // private void OnTriggerEnter(Collider other)
+   // {
+   //     if(other.CompareTag("Player"))
+   //     {
+   //        // player.GetComponent<CharacterMover>().transform.position = Vector3.zero + Vector3.up;
+   //        other.transform.position = player.GetComponent<CharacterMover>().repsawnPoint;
+   //     }
+   // }
 
     private IEnumerator StartBlackHole()
     {
@@ -68,6 +78,7 @@ public class SpaceZone : MonoBehaviour
 
         if(canGetUp)
         {
+            text.SetActive(true);
             if(Input.GetKeyDown(KeyCode.F))
             {
                 ragdoll.SetActive(false);

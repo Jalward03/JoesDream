@@ -58,8 +58,7 @@ namespace WipeOut
 				t += Time.deltaTime;
 			}
 
-			Cursor.lockState = CursorLockMode.None;
-			Cursor.visible = true;
+			
 			SceneManager.LoadScene("Podium");
 		}
 
